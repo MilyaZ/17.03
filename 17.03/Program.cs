@@ -10,7 +10,7 @@ namespace _17._03
 {
     class Producer
     {
-        //производит исходные данные
+        
         private int num;
         public static int maxNum = 3;
         private Thread t;
@@ -22,7 +22,7 @@ namespace _17._03
             get { return num; }
             set { num = Math.Abs(value) % maxNum; }
         }
-        public Producer(int num, CommonData d) //для определения какой из производителей
+        public Producer(int num, CommonData d)
         {
             Num = num;
             Start();
@@ -30,7 +30,7 @@ namespace _17._03
         
         }
         private void Generate()
-        {//бурная деятельность
+        {
             Random r = new Random((int)DateTime.Now.Ticks);
             int delay = r.Next(1000, 5000);
             Thread.Sleep(delay);
@@ -171,4 +171,4 @@ namespace _17._03
         }
     }
 }
-//объекты класса имеют ссылочный тип , поэтому cb будет меняться 
+
